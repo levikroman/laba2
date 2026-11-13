@@ -1,0 +1,110 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 6K of event 'task-clock:ppp'
+# Event count (approx.): 6559559553
+#
+# Children      Self  Command  Shared Object      Symbol                            
+# ........  ........  .......  .................  ..................................
+#
+   100.00%     0.00%  prog     prog               [.] _start
+            |
+            ---_start
+               __libc_start_main
+               |          
+                --99.98%--0x7e7726c2a601
+                          main
+                          |          
+                           --99.65%--mult_ijk
+
+   100.00%     0.00%  prog     libc.so.6          [.] __libc_start_main
+            |
+            ---__libc_start_main
+               |          
+                --99.98%--0x7e7726c2a601
+                          main
+                          |          
+                           --99.65%--mult_ijk
+
+    99.98%     0.00%  prog     libc.so.6          [.] 0x00007e7726c2a601
+            |
+            ---0x7e7726c2a601
+               main
+               |          
+                --99.65%--mult_ijk
+
+    99.98%     0.00%  prog     prog               [.] main
+            |
+            ---main
+               |          
+                --99.65%--mult_ijk
+
+    99.65%    99.57%  prog     prog               [.] mult_ijk
+            |          
+             --99.57%--_start
+                       __libc_start_main
+                       0x7e7726c2a601
+                       main
+                       mult_ijk
+
+     0.27%     0.03%  prog     prog               [.] init_matrices
+     0.26%     0.00%  prog     [kernel.kallsyms]  [.] asm_exc_page_fault
+     0.26%     0.00%  prog     [kernel.kallsyms]  [.] exc_page_fault
+     0.26%     0.05%  prog     [kernel.kallsyms]  [.] do_user_addr_fault
+     0.21%     0.03%  prog     [kernel.kallsyms]  [.] __handle_mm_fault
+     0.21%     0.00%  prog     [kernel.kallsyms]  [.] handle_mm_fault
+     0.18%     0.00%  prog     [kernel.kallsyms]  [.] do_anonymous_page
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] _raw_spin_unlock_irq
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] asm_sysvec_hyperv_stimer0
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] sysvec_hyperv_stimer0
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] irq_exit_rcu
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] handle_softirqs
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] run_timer_softirq
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] tmigr_handle_remote
+     0.06%     0.00%  prog     [kernel.kallsyms]  [.] alloc_pages_mpol
+     0.06%     0.00%  prog     [kernel.kallsyms]  [.] vma_alloc_folio_noprof
+     0.06%     0.00%  prog     [kernel.kallsyms]  [.] __alloc_frozen_pages_noprof
+     0.05%     0.05%  prog     [kernel.kallsyms]  [k] unmap_page_range
+     0.05%     0.05%  prog     [kernel.kallsyms]  [k] clear_page_erms
+     0.05%     0.00%  prog     libc.so.6          [.] __munmap
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] entry_SYSCALL_64_after_hwframe
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] do_syscall_64
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] x64_sys_call
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] __x64_sys_munmap
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] __vm_munmap
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] do_vmi_munmap
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] do_vmi_align_munmap
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] vms_complete_munmap_vmas
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] vms_clear_ptes.part.0
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] unmap_vmas
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] timer_expire_remote
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] unmap_single_vma.isra.0
+     0.03%     0.03%  prog     [kernel.kallsyms]  [k] memcg1_commit_charge
+     0.03%     0.03%  prog     [kernel.kallsyms]  [k] __pte_offset_map_lock
+     0.03%     0.00%  prog     [kernel.kallsyms]  [.] __mem_cgroup_charge
+     0.03%     0.00%  prog     [kernel.kallsyms]  [.] charge_memcg
+     0.02%     0.02%  prog     [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.02%     0.00%  prog     libc.so.6          [.] 0x00007e7726cb3dbf
+     0.02%     0.00%  prog     libc.so.6          [.] 0x00007e7726cb3097
+     0.02%     0.02%  prog     [kernel.kallsyms]  [k] __lruvec_stat_mod_folio
+     0.02%     0.00%  prog     libc.so.6          [.] 0x00007e7726cb10a1
+     0.02%     0.02%  prog     [kernel.kallsyms]  [k] __folio_batch_add_and_move
+     0.02%     0.02%  prog     [kernel.kallsyms]  [k] get_vma_policy
+     0.02%     0.02%  prog     [kernel.kallsyms]  [k] __rcu_read_lock
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] __pte_alloc
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] pte_alloc_one
+     0.02%     0.02%  prog     libc.so.6          [.] _exit
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] alloc_pages_noprof
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] folio_add_new_anon_rmap
+     0.02%     0.00%  prog     libc.so.6          [.] 0x00007e7726c2a608
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] __folio_mod_stat
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] folio_add_lru_vma
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] get_page_from_freelist
+     0.02%     0.00%  prog     libc.so.6          [.] 0x00007e7726c486be
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

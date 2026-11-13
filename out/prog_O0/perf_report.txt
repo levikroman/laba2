@@ -1,0 +1,120 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 18K of event 'task-clock:ppp'
+# Event count (approx.): 18369369351
+#
+# Children      Self  Command  Shared Object      Symbol                                   
+# ........  ........  .......  .................  .........................................
+#
+   100.00%     0.00%  prog     prog               [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0x7da495a2a601
+               main
+               |          
+                --99.79%--mult_ijk
+
+   100.00%     0.00%  prog     libc.so.6          [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0x7da495a2a601
+               main
+               |          
+                --99.79%--mult_ijk
+
+   100.00%     0.00%  prog     libc.so.6          [.] 0x00007da495a2a601
+            |
+            ---0x7da495a2a601
+               main
+               |          
+                --99.79%--mult_ijk
+
+   100.00%     0.00%  prog     prog               [.] main
+            |
+            ---main
+               |          
+                --99.79%--mult_ijk
+
+    99.79%    99.69%  prog     prog               [.] mult_ijk
+            |          
+             --99.69%--_start
+                       __libc_start_main
+                       0x7da495a2a601
+                       main
+                       mult_ijk
+
+     0.19%     0.04%  prog     prog               [.] init_matrices
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] asm_exc_page_fault
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] exc_page_fault
+     0.15%     0.03%  prog     [kernel.kallsyms]  [.] do_user_addr_fault
+     0.13%     0.02%  prog     [kernel.kallsyms]  [.] __handle_mm_fault
+     0.13%     0.00%  prog     [kernel.kallsyms]  [.] handle_mm_fault
+     0.11%     0.00%  prog     [kernel.kallsyms]  [.] do_anonymous_page
+     0.10%     0.00%  prog     [kernel.kallsyms]  [.] asm_sysvec_hyperv_stimer0
+     0.10%     0.00%  prog     [kernel.kallsyms]  [.] sysvec_hyperv_stimer0
+     0.09%     0.00%  prog     [kernel.kallsyms]  [.] irq_exit_rcu
+     0.09%     0.02%  prog     [kernel.kallsyms]  [.] handle_softirqs
+     0.06%     0.06%  prog     [kernel.kallsyms]  [k] _raw_spin_unlock_irqrestore
+     0.06%     0.01%  prog     [kernel.kallsyms]  [.] tmigr_handle_remote
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] run_timer_softirq
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] timer_expire_remote
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] vma_alloc_folio_noprof
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] alloc_pages_mpol
+     0.05%     0.00%  prog     [kernel.kallsyms]  [.] __alloc_frozen_pages_noprof
+     0.03%     0.03%  prog     [kernel.kallsyms]  [k] _raw_spin_unlock_irq
+     0.03%     0.01%  prog     [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.03%     0.03%  prog     [kernel.kallsyms]  [k] clear_page_erms
+     0.03%     0.00%  prog     [kernel.kallsyms]  [.] __mem_cgroup_charge
+     0.03%     0.00%  prog     [kernel.kallsyms]  [.] get_page_from_freelist
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] __run_timers
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] call_timer_fn
+     0.02%     0.00%  prog     libc.so.6          [.] __munmap
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] entry_SYSCALL_64_after_hwframe
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] do_syscall_64
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] x64_sys_call
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] __x64_sys_munmap
+     0.02%     0.01%  prog     [kernel.kallsyms]  [k] charge_memcg
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] __vm_munmap
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] do_vmi_munmap
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] do_vmi_align_munmap
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] vms_complete_munmap_vmas
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] vms_clear_ptes.part.0
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] tlb_finish_mmu
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] __tlb_batch_free_encoded_pages
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] free_pages_and_swap_cache
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] folios_put_refs
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] process_timeout
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] sched_balance_softirq
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] wake_up_process
+     0.02%     0.00%  prog     [kernel.kallsyms]  [.] try_to_wake_up
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] page_counter_try_charge
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] get_mem_cgroup_from_mm
+     0.01%     0.01%  prog     [kernel.kallsyms]  [.] __folio_batch_add_and_move
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] __pte_offset_map_lock
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] sched_balance_rq
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] folio_add_lru_vma
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] free_unref_folios
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] irqentry_exit
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] free_frozen_page_commit
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] irqentry_exit_to_user_mode
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] free_pcppages_bulk
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] sched_balance_domains
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] try_charge_memcg
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] mod_timer
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] __rcu_read_lock
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] __bitmap_weight
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] sched_balance_update_blocked_averages
+     0.01%     0.01%  prog     [kernel.kallsyms]  [k] __rseq_handle_notify_resume
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] __folio_throttle_swaprate
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] folio_batch_move_lru
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] task_work_run
+     0.01%     0.00%  prog     [kernel.kallsyms]  [.] tcp_keepalive_timer
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

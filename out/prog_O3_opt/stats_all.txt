@@ -1,0 +1,75 @@
+=== TIME ===
+	Command being timed: "./out/prog_O3_opt/prog 1200 1"
+	User time (seconds): 0.69
+	System time (seconds): 0.01
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 35620
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 8520
+	Voluntary context switches: 1
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+=== PERF STAT ===
+event syntax error: 'cpu_atom/TOPDOWN_BE_BOUND.ALL_P,metric-id=cpu_atom!3TOPD..'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'cpu_atom'
+Error:
+No supported events found.
+The L1-dcache-load-misses event is not supported.
+
+=== PERF REPORT ===
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'task-clock:ppp'
+# Event count (approx.): 1294294293
+#
+# Children      Self  Command  Shared Object      Symbol                            
+# ........  ........  .......  .................  ..................................
+#
+   100.00%     0.00%  prog     prog               [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0x7ba12ea2a601
+               main
+               |          
+               |--98.61%--mult_ikj
+               |          
+                --1.24%--init_matrices
+                          |          
+                           --1.08%--asm_exc_page_fault
+                                     exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.54%--handle_mm_fault
+                                                __handle_mm_fault
+                                                do_anonymous_page
+
+   100.00%     0.00%  prog     libc.so.6          [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0x7ba12ea2a601
+               main
+               |          
+               |--98.61%--mult_ikj
+               |          
+                --1.24%--init_matrices
+                          |          

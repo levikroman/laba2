@@ -1,0 +1,186 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'task-clock:ppp'
+# Event count (approx.): 1294294293
+#
+# Children      Self  Command  Shared Object      Symbol                            
+# ........  ........  .......  .................  ..................................
+#
+   100.00%     0.00%  prog     prog               [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0x7ba12ea2a601
+               main
+               |          
+               |--98.61%--mult_ikj
+               |          
+                --1.24%--init_matrices
+                          |          
+                           --1.08%--asm_exc_page_fault
+                                     exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.54%--handle_mm_fault
+                                                __handle_mm_fault
+                                                do_anonymous_page
+
+   100.00%     0.00%  prog     libc.so.6          [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0x7ba12ea2a601
+               main
+               |          
+               |--98.61%--mult_ikj
+               |          
+                --1.24%--init_matrices
+                          |          
+                           --1.08%--asm_exc_page_fault
+                                     exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.54%--handle_mm_fault
+                                                __handle_mm_fault
+                                                do_anonymous_page
+
+   100.00%     0.00%  prog     libc.so.6          [.] 0x00007ba12ea2a601
+            |
+            ---0x7ba12ea2a601
+               main
+               |          
+               |--98.61%--mult_ikj
+               |          
+                --1.24%--init_matrices
+                          |          
+                           --1.08%--asm_exc_page_fault
+                                     exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.54%--handle_mm_fault
+                                                __handle_mm_fault
+                                                do_anonymous_page
+
+   100.00%     0.00%  prog     prog               [.] main
+            |
+            ---main
+               |          
+               |--98.61%--mult_ikj
+               |          
+                --1.24%--init_matrices
+                          |          
+                           --1.08%--asm_exc_page_fault
+                                     exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.54%--handle_mm_fault
+                                                __handle_mm_fault
+                                                do_anonymous_page
+
+    98.61%    98.53%  prog     prog               [.] mult_ikj
+            |          
+             --98.53%--_start
+                       __libc_start_main
+                       0x7ba12ea2a601
+                       main
+                       mult_ikj
+
+     1.24%     0.15%  prog     prog               [.] init_matrices
+            |          
+             --1.08%--init_matrices
+                       asm_exc_page_fault
+                       exc_page_fault
+                       do_user_addr_fault
+                       |          
+                        --0.54%--handle_mm_fault
+                                  __handle_mm_fault
+                                  do_anonymous_page
+
+     1.08%     0.00%  prog     [kernel.kallsyms]  [.] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               exc_page_fault
+               do_user_addr_fault
+               |          
+                --0.54%--handle_mm_fault
+                          __handle_mm_fault
+                          do_anonymous_page
+
+     1.08%     0.00%  prog     [kernel.kallsyms]  [.] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+               |          
+                --0.54%--handle_mm_fault
+                          __handle_mm_fault
+                          do_anonymous_page
+
+     1.08%     0.46%  prog     [kernel.kallsyms]  [k] do_user_addr_fault
+            |          
+             --0.62%--do_user_addr_fault
+                       |          
+                        --0.54%--handle_mm_fault
+                                  __handle_mm_fault
+                                  do_anonymous_page
+
+     0.54%     0.00%  prog     [kernel.kallsyms]  [.] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               do_anonymous_page
+
+     0.54%     0.00%  prog     [kernel.kallsyms]  [.] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               do_anonymous_page
+
+     0.54%     0.00%  prog     [kernel.kallsyms]  [.] do_anonymous_page
+            |
+            ---do_anonymous_page
+
+     0.23%     0.23%  prog     [kernel.kallsyms]  [k] __rmqueue_pcplist
+     0.23%     0.00%  prog     [kernel.kallsyms]  [.] vma_alloc_folio_noprof
+     0.23%     0.00%  prog     [kernel.kallsyms]  [.] alloc_pages_mpol
+     0.23%     0.00%  prog     [kernel.kallsyms]  [.] __alloc_frozen_pages_noprof
+     0.23%     0.00%  prog     [kernel.kallsyms]  [.] get_page_from_freelist
+     0.15%     0.00%  prog     libc.so.6          [.] __munmap
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] entry_SYSCALL_64_after_hwframe
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] do_syscall_64
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] x64_sys_call
+     0.15%     0.15%  prog     [kernel.kallsyms]  [k] __pte_offset_map_lock
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] __x64_sys_munmap
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] __vm_munmap
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] do_vmi_munmap
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] do_vmi_align_munmap
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] vms_complete_munmap_vmas
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] vms_clear_ptes.part.0
+     0.15%     0.00%  prog     [kernel.kallsyms]  [.] __folio_throttle_swaprate
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] uncharge_folio
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] folio_remove_rmap_ptes
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] __rcu_read_lock
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] _raw_spin_unlock_irq
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] blk_cgroup_congested
+     0.08%     0.08%  prog     [kernel.kallsyms]  [k] mas_walk
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] asm_sysvec_hyperv_stimer0
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] sysvec_hyperv_stimer0
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] irq_exit_rcu
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] tlb_finish_mmu
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] __tlb_batch_free_encoded_pages
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] handle_softirqs
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] free_pages_and_swap_cache
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] run_timer_softirq
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] unmap_vmas
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] folios_put_refs
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] tmigr_handle_remote
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] unmap_single_vma.isra.0
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] __mem_cgroup_uncharge_folios
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] lock_vma_under_rcu
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] timer_expire_remote
+     0.08%     0.00%  prog     [kernel.kallsyms]  [.] unmap_page_range
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

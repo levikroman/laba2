@@ -1,0 +1,7 @@
+event syntax error: 'cpu_atom/TOPDOWN_BE_BOUND.ALL_P,metric-id=cpu_atom!3TOPD..'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'cpu_atom'
+Error:
+No supported events found.
+The L1-dcache-load-misses event is not supported.
